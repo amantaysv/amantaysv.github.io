@@ -7,7 +7,6 @@ window.addEventListener('load', () => {
   }, 600);
 });
 
-console.log('alihan pedik');
 const tabsContainer = document.querySelector(".about-tabs");
 const aboutSection = document.querySelector(".about");
 
