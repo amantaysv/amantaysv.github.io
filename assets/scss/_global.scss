@@ -6,6 +6,7 @@ button {
 body {
    min-height: 100vh;
    background: linear-gradient(to bottom right, $main-color, $aqua);
+   
    background-attachment: fixed;
    font-size: 16px;
    font-family: 'Poppins', sans-serif;
@@ -40,8 +41,7 @@ img {
 
 section {
    min-height: 90vh;
-   background-color: $white-alpha-25;
-   // background-color: rgba($color: #fff, $alpha: 0.05);
+   background-color: rgba($color: #fff, $alpha: 0.05);
    border-top: 1px solid $white-alpha-25;
    border-left: 1px solid $white-alpha-25;
    border-radius: 30px;

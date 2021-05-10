@@ -43,7 +43,7 @@
       border: none;
       cursor: pointer;
       border-radius: 50%;
-      background: $white-alpha-25;
+      background-color: $white-alpha-25;
       border-top: 1px solid $white-alpha-25;
       border-left: 1px solid $white-alpha-25;
       display: flex;
@@ -100,7 +100,7 @@
       &-collapse {
          max-width: 1200px;
          min-height: 90vh;
-         background-color: $white-alpha-25;
+         background-color: rgba($color: #fff, $alpha: 0.05);
          border-top: 1px solid $white-alpha-25;
          border-left: 1px solid $white-alpha-25;
          border-radius: 30px;
