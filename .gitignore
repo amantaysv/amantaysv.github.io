@@ -2,13 +2,14 @@
 /node_modules
 node_modules
 npm-debug.log
+assets/scss/
 
 # Local development
 *.env
 *.dev
 *.scss
 .DS_Store
-/assets/scss
+
 # Docker
 Dockerfile
 docker-compose.yml
