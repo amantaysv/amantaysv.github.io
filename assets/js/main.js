@@ -1,3 +1,13 @@
+window.addEventListener('load', () => {
+  document.querySelector('.main').classList.remove('hidden');
+  document.querySelector('.home').classList.add('active');
+  document.querySelector('.page-loader').classList.add('fade-out');
+  setTimeout(() => {
+    document.querySelector('.page-loader').style.display = 'none';
+  }, 600);
+});
+
+console.log('alihan pedik');
 const tabsContainer = document.querySelector(".about-tabs");
 const aboutSection = document.querySelector(".about");
 
