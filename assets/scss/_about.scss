@@ -1,0 +1,169 @@
+.about {
+   &__img-box {
+      background: $white-alpha-25;
+      max-width: 100%;
+      margin: 0 auto;
+      border-radius: 10px;
+
+      img {
+         width: 100%;
+         border-radius: 10px;
+         box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+      }
+   }
+
+   &__text {
+      h3 {
+         text-transform: capitalize;
+         font-size: 20px;
+         margin: 20px 0;
+      }
+
+      .skills {
+         display: flex;
+         flex-wrap: wrap;
+
+         &-item {
+            background-color: $white-alpha-25;
+            border-top: 1px solid $white-alpha-25;
+            border-left: 1px solid $white-alpha-25;
+            padding: 5px 15px;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+            border-radius: 20px;
+            transition: all 2s;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+            user-select: none;
+
+            &:not(:last-child) {
+               margin-right: 10px;
+            }
+
+            &:hover {
+               color: $white;
+               cursor: default;
+               border-color: $main-color;
+               transition: all 0.3s;
+               background: $main-color;
+            }
+         }
+      }
+
+      .btn {
+         margin-bottom: 15px;
+
+         &:not(:last-child) {
+            margin-right: 15px;
+         }
+      }
+   }
+
+   &-tabs {
+      margin-top: 20px;
+
+      .tab-item {
+         padding: 2px 0;
+         background-color: transparent;
+         border: none;
+         text-transform: capitalize;
+         display: inline-block;
+         color: $blue-dark;
+         cursor: pointer;
+         font-weight: 500;
+         position: relative;
+         opacity: 0.5;
+         transition: all 0.3s ease;
+
+         &:not(:last-child) {
+            margin-right: 30px;
+         }
+
+         &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background-color: $blue-dark;
+            transition: width 0.3s ease;
+         }
+
+         &:hover::before {
+            width: 100%;
+         }
+
+         &.active {
+            color: $main-color;
+            opacity: 1;
+            cursor: auto;
+
+            &::before {
+               width: 100%;
+               background-color: $main-color;
+            }
+         }
+      }
+   }
+
+   .tab-content {
+      padding: 40px 0;
+      display: none;
+
+      &.active {
+         display: block;
+      }
+
+      .timeline {
+         position: relative;
+
+         &::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            top: 0;
+            left: 5px;
+            background: $main-color;
+         }
+
+         &-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding: 10px 0 0 40px;
+
+            &::before {
+               content: '';
+               position: absolute;
+               left: 0;
+               top: 16px;
+               height: 11px;
+               width: 11px;
+               background: $main-color;
+               border-radius: 50%;
+            }
+
+            &:not(:last-child) {
+               margin-bottom: 30px;
+            }
+
+            .date {
+               display: block;
+               color: $main-color;
+               font-weight: 400;
+               margin-bottom: 10px;
+            }
+
+            h4 {
+               font-size: 18px;
+               text-transform: capitalize;
+               margin-bottom: 10px;
+
+               span {
+                  font-weight: 400;
+               }
+            }
+         }
+      }
+   }
+}
