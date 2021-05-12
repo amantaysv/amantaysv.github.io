@@ -1,9 +1,9 @@
-window.addEventListener('load', () => {
-  document.querySelector('.main').classList.remove('hidden');
-  document.querySelector('.home').classList.add('active');
-  document.querySelector('.page-loader').classList.add('fade-out');
+window.addEventListener("load", () => {
+  document.querySelector(".main").classList.remove("hidden");
+  document.querySelector(".home").classList.add("active");
+  document.querySelector(".page-loader").classList.add("fade-out");
   setTimeout(() => {
-    document.querySelector('.page-loader').style.display = 'none';
+    document.querySelector(".page-loader").style.display = "none";
   }, 600);
 });
 
@@ -49,19 +49,14 @@ document.addEventListener("click", (e) => {
 });
 
 function portfolioItemDetails(portfolioItem) {
-  document.querySelector(
-    ".portfolio-popup-thumbnail img"
-  ).src = portfolioItem.querySelector(".portfolio-item img").src;
+  document.querySelector(".portfolio-popup-thumbnail img").src =
+    portfolioItem.querySelector(".portfolio-item img").src;
 
-  document.querySelector(
-    ".portfolio-popup-header h3"
-  ).innerHTML = portfolioItem.querySelector(".portfolio-item-title").innerHTML;
+  document.querySelector(".portfolio-popup-header h3").innerHTML =
+    portfolioItem.querySelector(".portfolio-item-title").innerHTML;
 
-  document.querySelector(
-    ".portfolio-popup-body"
-  ).innerHTML = portfolioItem.querySelector(
-    ".portfolio-item-details"
-  ).innerHTML;
+  document.querySelector(".portfolio-popup-body").innerHTML =
+    portfolioItem.querySelector(".portfolio-item-details").innerHTML;
 }
 
 const burger = document.querySelector(".burger");
@@ -82,6 +77,7 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("link-item") && e.target.hash !== "") {
     document.querySelector(".overlay").classList.add("active");
     burger.classList.add("hide");
+    document.querySelector(".toggle").classList.add("hide");
     if (e.target.classList.contains("nav-link")) {
       toggleNavbar();
     } else {
@@ -96,7 +92,14 @@ document.addEventListener("click", (e) => {
       window.scrollTo(0, 0);
       document.body.classList.remove("hide-scrolling");
       burger.classList.remove("hide");
+      document.querySelector(".toggle").classList.remove("hide");
       document.querySelector(".overlay").classList.remove("active");
     }, 500);
   }
+});
+
+const sec = document.querySelector("body");
+const toggle = document.querySelector(".toggle");
+toggle.addEventListener("click", () => {
+  sec.classList.toggle("dark");
 });
