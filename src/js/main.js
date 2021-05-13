@@ -97,9 +97,3 @@ document.addEventListener("click", (e) => {
     }, 500);
   }
 });
-
-const sec = document.querySelector("body");
-const toggle = document.querySelector(".toggle");
-toggle.addEventListener("click", () => {
-  sec.classList.toggle("dark");
-});
