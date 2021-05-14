@@ -2,4 +2,4 @@
 ## Amantay Suranaliev 
 #### Frontend Web - Developer
  
-[#### View My Portfolio](https://amantaysv.github.io/)
+#### [View My Portfolio](https://amantaysv.github.io/)
