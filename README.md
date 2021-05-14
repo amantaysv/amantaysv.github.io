@@ -1,5 +1,4 @@
 #### Hello, I'm 
-## Amantay Suranaliev 
+### Amantay Suranaliev 
 #### Frontend Web - Developer
- 
-#### [View My Portfolio](https://amantaysv.github.io/)
+[![avatar](./src/images/home/ice-bear-seal.webp)](https://amantaysv.github.io/)
