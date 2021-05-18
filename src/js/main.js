@@ -81,10 +81,10 @@ document.addEventListener("click", (e) => {
     burger.classList.remove("active");
     document.querySelector(".toggle").classList.add("hide");
     if (e.target.classList.contains("nav-link")) {
+      document.body.classList.add("hide-scrolling");
       toggleNavbar();
     } else {
       hideSection();
-      document.body.classList.add("hide-scrolling");
     }
     setTimeout(() => {
       document
@@ -99,3 +99,35 @@ document.addEventListener("click", (e) => {
     }, 500);
   }
 });
+
+window.onload = function () {
+  const parallax = document.querySelector(".home");
+  const bg = document.querySelector(".home__avatar");
+  const forBg = 20;
+  const speed = 0.05;
+  let positionX = 0;
+  let positionY = 0;
+  let coordXpercent = 0;
+  let coordYpercent = 0;
+
+  function setMouseParallaxStyle() {
+    const distX = coordXpercent - positionX;
+    const distY = coordYpercent - positionY;
+    positionX = positionX + distX * speed;
+    positionY = positionY + distY * speed;
+    bg.style.transform = `translate(${positionX / forBg}%, ${
+      positionY / forBg
+    }%)`;
+    requestAnimationFrame(setMouseParallaxStyle);
+  }
+  setMouseParallaxStyle();
+
+  parallax.addEventListener("mousemove", function (e) {
+    const parallaxWidth = parallax.offsetWidth;
+    const parallaxHeight = parallax.offsetHeight;
+    const coordX = e.pageX - parallaxWidth / 2;
+    const coordY = e.pageY - parallaxHeight / 2;
+    coordXpercent = (coordX / parallaxWidth) * 100;
+    coordYpercent = (coordY / parallaxHeight) * 100;
+  });
+};
