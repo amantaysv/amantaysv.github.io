@@ -394,11 +394,18 @@
                            <span class="line"></span>
                         </label>
                         <div>
-                           <button type="submit" class="btn" id="contact-submit">send message</button>
+                           <!-- <button type="submit" class="btn">send message</button> -->
+                           <button class="button active" type="submit" id="contact-submit">
+                              <span class="default">send message</span>
+                              <span class="success" id="form-status"></span>
+                              <div class="left"></div>
+                              <div class="right"></div>
+                           </button>
                         </div>
                      </div>
                   </form>
                   <div id="form-status"></div>
+                  <!-- <div id="paper-plane"><i class="fas fa-paper-plane"></i></div> -->
                </div>
                <div class="contact-info col-12 col-md-6">
                   <div class="contact-info-item">
@@ -463,6 +470,7 @@
       <div class="circle-5"></div>
    </div>
    <!-- disigned by Amantay -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
    <script src="./src/js/main.js"></script>
    <script src="./src/js/darkmode.js"></script>
    <script src="./src/js/form.js"></script>
