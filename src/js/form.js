@@ -1,9 +1,10 @@
-var form = document.getElementById("contact-form");
+const form = document.getElementById("contact-form");
 
 async function handleSubmit(event) {
   event.preventDefault();
-  var status = document.getElementById("my-form-status");
-  var data = new FormData(event.target);
+  const btn = document.getElementById('contact-submit');
+  const status = document.getElementById("form-status");
+  const data = new FormData(event.target);
   fetch(event.target.action, {
     method: form.method,
     body: data,
@@ -12,7 +13,8 @@ async function handleSubmit(event) {
     },
   })
     .then((response) => {
-      status.innerHTML = "Thanks for your submission!";
+      status.textContent = "Thanks for your submission!";
+      // btn.textContent = 'kek'
       form.reset();
     })
     .catch((error) => {
